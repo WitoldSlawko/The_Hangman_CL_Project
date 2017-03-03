@@ -1,0 +1,340 @@
+@function rel($licznik,$mianownik){
+    $wynik_procent: ($licznik/$mianownik)*100%;
+    @return $wynik_procent;
+}
+
+@font-face {
+	font-family: "friday13sh";
+	src: local("friday13sh"), url("../fonts/friday13/friday13sh-webfont.woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "friday13v12";
+	src: local("friday13v12"), url("../fonts/friday13/friday13v12-webfont.woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+	position: relative;
+    font-family: "friday13v12";
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header {
+	> .container {
+		display: flex;
+		height: 64px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    > .title_logo {
+      background-image: url(../images/hm_tittle3.png);
+      height: 50px;
+      width: rel(150,1200);
+      background-size: cover;
+      background-position-y: -5px;
+    }
+	}
+}
+
+/* --------------------------------- */
+
+.intro {
+  > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 550px;
+    width: 100%;
+        > .question {
+        background-color: black;
+        background-image: url(../images/bg_1.jpg);
+        height: 100%;
+        width: 50%;
+        background-size: cover;
+        background-position: center;
+        }
+        > .play_me {
+          width: rel(100,1200);
+          height: 50px;
+          font-size: 20px;
+        }
+        > .play_me:hover {
+           color: red;
+        }
+    }
+}
+
+.category_btns {
+  display: none;
+	> .container {
+		height: 32px;
+        > * {
+            display: block;
+            position: relative;
+        }
+		> .category_pack {
+            float: left;
+			width: rel(370,1200);
+			display: flex;
+			> h2 {
+                font-size: 18px;
+                margin-left: 15px;
+			}
+			> .category_type {
+                left: 10px;
+                height: 25px;
+                width: rel(150,270);
+        label {
+          color: yellow;
+          font-weight: bold;
+          letter-spacing: 3px;
+        }
+			}
+		}
+        > .score_board {
+            float: left;
+            height: 32px;
+            width: rel(400,1200);
+            //border: 1px dotted black;
+            display: flex;
+            justify-content: space-around;
+            > .win_rate{
+                color: lime;
+                letter-spacing: 5px;
+            }
+            > .win_count {
+                color: lime;
+                font-family: cursive;
+            }
+            > .lose_rate {
+                color: red;
+                letter-spacing: 5px;
+            }
+            > .lose_count {
+                color: red;
+                font-family: cursive;
+            }
+            > * {
+                width: 20%;
+                height: 32px;
+                font-size: 20px;
+                font-weight: bold;
+                //border: 1px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+		> .surrender {
+            float: left;
+			height: 32px;
+			width: 32px;
+			background-image: url(../images/white_flag_icon.png);
+			background-size: cover;
+		}
+		> .refresh {
+            float: right;
+			height: 32px;
+			width: 32px;
+			background-image: url(../images/refresh_icon.png);
+			background-size: cover;
+		}
+	}
+}
+
+/* --------------------------------- */
+
+.score {
+  display: none;
+	> .container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		height: 350px;
+		> .hangman_outer {
+			height: 250px;
+			width: rel(200,1200);
+            overflow: hidden;
+            position: relative;
+            float: left;
+            transition: all 1s ease;
+            display: flex;
+            justify-content: center;
+            > .hangman_inner {
+                height: 250px;
+                width: 150px;
+                overflow: hidden;
+                position: absolute;
+                transition: all 1s ease;
+                border: 5px solid grey;
+            }
+		}
+        > .life {
+            height: 25px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            > .heart {
+                height: 100%;
+                width: rel(25,1200);
+                background-image: url(../images/heart.jpg);
+                background-size: cover;
+            }
+            > .life_count {
+                height: 100%;
+                width: rel(25,1200);
+                font-size: 20px;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                color: darkred;
+                font-family: cursive;
+            }
+        }
+		> .letters {
+			height: 75px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+      > .square {
+          width: 50px;
+          height: 50px;
+          margin: 0 10px;
+          font-size: 35px;
+          background-color: grey;
+          border: 1px solid black;
+        }
+        }
+	}
+}
+
+/* --------------------------------- */
+
+.typing {
+  display: none;
+	> .container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 40px;
+		> .selected {
+            background-color: white;
+			height: 40px;
+            //border: 0px solid transparent;
+			width: rel(50,1200);
+			margin-right: 15px;
+			border: 1px solid black;
+			text-transform: uppercase;
+		}
+		> .accept {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 40px;
+			width: rel(50,1200);
+            letter-spacing: 1px;
+		}
+	}
+}
+
+/* --------------------------------- */
+
+.keyboard {
+  display: none;
+	> .container {
+		height: 175px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		> .row {
+			width: 100%;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			> button {
+                width: rel(50,1200);
+                height: 100%;
+                margin: 0 rel(10,1200);
+                border-radius: 50%;
+                font-family: "friday13sh";
+			}
+		}
+	}
+}
+
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+}
+
+.row > button {
+	font-size: 20px;
+}
+
+/* --------------------------------- */
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+/* --------------------------------- */
+
+.old_path {
+    background-image: url(../images/hangman_slides.png);
+}
+
+.new_path {
+    background-image: url(../images/hm_win.png);
+}
+
+/* --------------------------------- */
+
+.surrender:hover::after {
+    content: "surrender";
+    background-color: yellow;
+    position: absolute;
+    top: -20px;
+    left: -15px;
+}
+
+.refresh:hover::before {
+    content: "refresh";
+    background-color: yellow;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+}
+
+label:hover::after {
+    content: "select category";
+    color: black;
+    background-color: yellow;
+    position: absolute;
+    top: -20px;
+    left: -15px;
+}

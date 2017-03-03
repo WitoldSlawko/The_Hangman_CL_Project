@@ -1,0 +1,321 @@
+@font-face {
+  font-family: "friday13sh";
+  src: local("friday13sh"), url("../fonts/friday13/friday13sh-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "friday13v12";
+  src: local("friday13v12"), url("../fonts/friday13/friday13v12-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  position: relative;
+  font-family: "friday13v12";
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header > .container {
+  display: flex;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > .container > .title_logo {
+  background-image: url(../images/hm_tittle3.png);
+  height: 50px;
+  width: 12.5%;
+  background-size: cover;
+  background-position-y: -5px;
+}
+
+/* --------------------------------- */
+.intro > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 550px;
+  width: 100%;
+}
+.intro > .container > .question {
+  background-color: black;
+  background-image: url(../images/bg_1.jpg);
+  height: 100%;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+}
+.intro > .container > .play_me {
+  width: 8.33333%;
+  height: 50px;
+  font-size: 20px;
+}
+.intro > .container > .play_me:hover {
+  color: red;
+}
+
+.category_btns {
+  display: none;
+}
+.category_btns > .container {
+  height: 32px;
+}
+.category_btns > .container > * {
+  display: block;
+  position: relative;
+}
+.category_btns > .container > .category_pack {
+  float: left;
+  width: 30.83333%;
+  display: flex;
+}
+.category_btns > .container > .category_pack > h2 {
+  font-size: 18px;
+  margin-left: 15px;
+}
+.category_btns > .container > .category_pack > .category_type {
+  left: 10px;
+  height: 25px;
+  width: 55.55556%;
+}
+.category_btns > .container > .category_pack > .category_type label {
+  color: yellow;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+.category_btns > .container > .score_board {
+  float: left;
+  height: 32px;
+  width: 33.33333%;
+  display: flex;
+  justify-content: space-around;
+}
+.category_btns > .container > .score_board > .win_rate {
+  color: lime;
+  letter-spacing: 5px;
+}
+.category_btns > .container > .score_board > .win_count {
+  color: lime;
+  font-family: cursive;
+}
+.category_btns > .container > .score_board > .lose_rate {
+  color: red;
+  letter-spacing: 5px;
+}
+.category_btns > .container > .score_board > .lose_count {
+  color: red;
+  font-family: cursive;
+}
+.category_btns > .container > .score_board > * {
+  width: 20%;
+  height: 32px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category_btns > .container > .surrender {
+  float: left;
+  height: 32px;
+  width: 32px;
+  background-image: url(../images/white_flag_icon.png);
+  background-size: cover;
+}
+.category_btns > .container > .refresh {
+  float: right;
+  height: 32px;
+  width: 32px;
+  background-image: url(../images/refresh_icon.png);
+  background-size: cover;
+}
+
+/* --------------------------------- */
+.score {
+  display: none;
+}
+.score > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 350px;
+}
+.score > .container > .hangman_outer {
+  height: 250px;
+  width: 16.66667%;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  transition: all 1s ease;
+  display: flex;
+  justify-content: center;
+}
+.score > .container > .hangman_outer > .hangman_inner {
+  height: 250px;
+  width: 150px;
+  overflow: hidden;
+  position: absolute;
+  transition: all 1s ease;
+  border: 5px solid grey;
+}
+.score > .container > .life {
+  height: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.score > .container > .life > .heart {
+  height: 100%;
+  width: 2.08333%;
+  background-image: url(../images/heart.jpg);
+  background-size: cover;
+}
+.score > .container > .life > .life_count {
+  height: 100%;
+  width: 2.08333%;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: darkred;
+  font-family: cursive;
+}
+.score > .container > .letters {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.score > .container > .letters > .square {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  font-size: 35px;
+  background-color: grey;
+  border: 1px solid black;
+}
+
+/* --------------------------------- */
+.typing {
+  display: none;
+}
+.typing > .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+.typing > .container > .selected {
+  background-color: white;
+  height: 40px;
+  width: 4.16667%;
+  margin-right: 15px;
+  border: 1px solid black;
+  text-transform: uppercase;
+}
+.typing > .container > .accept {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 4.16667%;
+  letter-spacing: 1px;
+}
+
+/* --------------------------------- */
+.keyboard {
+  display: none;
+}
+.keyboard > .container {
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.keyboard > .container > .row {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+.keyboard > .container > .row > button {
+  width: 4.16667%;
+  height: 100%;
+  margin: 0 0.83333%;
+  border-radius: 50%;
+  font-family: "friday13sh";
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.row > button {
+  font-size: 20px;
+}
+
+/* --------------------------------- */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* --------------------------------- */
+.old_path {
+  background-image: url(../images/hangman_slides.png);
+}
+
+.new_path {
+  background-image: url(../images/hm_win.png);
+}
+
+/* --------------------------------- */
+.surrender:hover::after {
+  content: "surrender";
+  background-color: yellow;
+  position: absolute;
+  top: -20px;
+  left: -15px;
+}
+
+.refresh:hover::before {
+  content: "refresh";
+  background-color: yellow;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+}
+
+label:hover::after {
+  content: "select category";
+  color: black;
+  background-color: yellow;
+  position: absolute;
+  top: -20px;
+  left: -15px;
+}
+
+/*# sourceMappingURL=style.css.map */

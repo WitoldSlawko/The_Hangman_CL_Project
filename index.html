@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The_Hangman</title>
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+  <script src="js/jquery_3-1-1.js"> </script>
+	<!-- <script type="text/javascript" src="js/hm_words.js"></script> -->
+	<script type="text/javascript" src="js/app.js"></script>
+  <script type=text/javascript src="js/switch_intro-to-game.js"></script>
+  <script type="text/javascript" src="js/jquery-play-sound.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+            <div class="title_logo"></div>
+		</div>
+	</header>
+	<main>
+    <section class="intro">
+      <div class="container">
+        <div class="question"></div>
+        <button class="play_me">Play me !</button>
+      </div>
+    </section>
+		<section class="category_btns">
+			<div class="container">
+				<div class="category_pack">
+					<form class="category_type">
+						<fieldset>
+							<label>category:
+								<select class="categories">
+									<option class="first_opt">Select ...</option>
+									<option>Animals</option>
+									<option>Body</option>
+									<option>Buildings</option>
+									<option>City</option>
+									<option>Clothes</option>
+									<option>Computer</option>
+									<option>Cosmetics</option>
+									<option>Criminals</option>
+									<option>Family</option>
+									<option>Fruits</option>
+									<option>Geography</option>
+									<option>House</option>
+									<option>Jobs</option>
+									<option>Music</option>
+									<option>Subjects</option>
+									<option>Sports</option>
+									<option>Trees</option>
+									<option>Vehicles</option>
+									<option>Weather</option>
+									<option>Zodiac</option>
+								</select>
+							</label>
+						</fieldset>
+					</form>
+				</div>
+                <div class="score_board">
+                    <p class="win_rate">won:</p>
+                    <p class="win_count"></p>
+                    <p class="lose_rate">lost:</p>
+                    <p class="lose_count"></p>
+                </div>
+				<button class="surrender"></button>
+                <!--<div class="surr">Surrender</div>
+                <div class="ref">Refresh</div>-->
+				<button class="refresh"></button>
+			</div>
+		</section>
+		<section class="score">
+			<div class="container">
+				<div class="hangman_outer">
+                    <div class="hangman_inner"></div>
+                </div>
+                <div class="life">
+                    <div class="heart"></div>
+                    <p class="life_count"></p>
+                </div>
+				<div class="letters"></div>
+			</div>
+		</section>
+		<section class="typing">
+			<div class="container">
+				<div class="selected center"></div>
+				<button class="accept">Enter</button>
+			</div>
+		</section>
+		<section class="keyboard">
+			<div class="container">
+				<div class="row">
+					<button class="button_Q">Q</button>
+					<button class="button_W">W</button>
+					<button class="button_E">E</button>
+					<button class="button_R">R</button>
+					<button class="button_T">T</button>
+					<button class="button_Y">Y</button>
+					<button class="button_U">U</button>
+					<button class="button_I">I</button>
+					<button class="button_O">O</button>
+					<button class="button_P">P</button>
+				</div>
+				<div class="row">
+					<button class="button_A">A</button>
+					<button class="button_S">S</button>
+					<button class="button_D">D</button>
+					<button class="button_F">F</button>
+					<button class="button_G">G</button>
+					<button class="button_H">H</button>
+					<button class="button_J">J</button>
+					<button class="button_K">K</button>
+					<button class="button_L">L</button>
+				</div>
+				<div class="row">
+					<button class="button_Z">Z</button>
+					<button class="button_X">X</button>
+					<button class="button_C">C</button>
+					<button class="button_V">V</button>
+					<button class="button_B">B</button>
+					<button class="button_N">N</button>
+					<button class="button_M">M</button>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer></footer>
+</body>
+</html>
