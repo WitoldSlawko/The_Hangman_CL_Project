@@ -16,14 +16,21 @@ $(document).ready(function(){
     var lose_count = $('.lose_count');
 	
 	var accept = $('.accept');
-      
-    var hm_url = "https://api.myjson.com/bins/193uyt/";
+
+    var cat_warn = $('.category_warning');
+    
+    var scores = $('.scores');
+    var new_player_add = $('.new_player');
+    var delete_players = $('.delete_players');
+
+    var hm_words = "https://english-words-6f7d0.firebaseio.com/.json";
+    var hm_scores = "https://hangman-scores-f6aa4.firebaseio.com/.json";
     
     var json = (function () {
         $.ajax({
             'async': false,
             'global': true,
-            'url': hm_url,
+            'url': hm_words,
             'dataType': "json"
         }).done(function(data){
             json = data;
@@ -32,6 +39,19 @@ $(document).ready(function(){
     })(); 
     
     //console.log(json);
+    /*
+    var json_2 = (function () {
+        $.ajax({
+            'async': false,
+            'global': true,
+            'url': hm_scores,
+            'dataType': "json"
+        }).done(function(data_2){
+            json_2 = data_2;
+        });
+        return json_2;
+    })();
+    */
 
     var animals_pool = json['0'].animals_pool;
     var body_pool = json['0'].body_pool;
@@ -45,7 +65,7 @@ $(document).ready(function(){
     var fruits_pool = json['0'].fruits_pool;
     var geography_pool = json['0'].geography_pool;
     var house_pool = json['0'].house_pool;
-    var jobs_pool = json['0'].jobs_pool;
+    var jobs_pool = json['0'].jobs_pool; 
     var music_pool = json['0'].music_pool;
     var subjects_pool = json['0'].subjects_pool;
     var sports_pool = json['0'].sports_pool;
@@ -73,6 +93,82 @@ $(document).ready(function(){
     
     var lose_number = 0;
     lose_count.text(lose_number);
+    
+    scores.on('click',function(){
+        
+        var json_2 = (function () {
+        $.ajax({
+            'async': false,
+            'global': true,
+            'url': hm_scores,
+            'dataType': "json"
+        }).done(function(data_2){
+            json_2 = data_2;
+        });
+        return json_2;
+    })();
+        
+        $('ul').empty();
+        for (var property in json_2) {
+            var new_li = $('<li>');
+            new_li.text(json_2[property].name+' W:'+json_2[property].won+' L:'+json_2[property].lost);
+            new_li.appendTo($('ul'));
+        }
+    });
+    
+    delete_players.on('click', function(){
+        
+        var json_2 = (function () {
+        $.ajax({
+            'async': false,
+            'global': true,
+            'url': hm_scores,
+            'dataType': "json"
+        }).done(function(data_2){
+            json_2 = data_2;
+        });
+        return json_2;
+    })();
+        
+        for (var property in json_2) {
+            
+            $.ajax({
+				url: "https://hangman-scores-f6aa4.firebaseio.com/"+property+".json",
+				dataType: 'json',
+				type: 'DELETE'
+			}).done(function(response){
+				console.log(response);
+			})
+            
+        }
+        
+    });
+    
+    new_player_add.on('click',function(){
+        
+        var new_player_info = {
+            name: $('.adding_player').val(),
+            won: win_count.text(),
+            lost: lose_count.text()
+        };
+        
+        $('.adding_player').val('');
+        win_count.text(0);
+        lose_count.text(0);
+        
+        $.ajax({
+				url: hm_scores,
+				type: 'POST',
+				data: JSON.stringify(new_player_info),
+                contentType:"application/json; charset=utf-8",
+				dataType: 'json'
+			}).done(function(response){
+				console.log(response);
+			}).fail(function(error){
+				console.log(error);
+			})
+        
+    });
     
     // Funkcja wyłączająca wybraną już literę
 	function checking(letter){
@@ -158,7 +254,7 @@ $(document).ready(function(){
 		   letters.children().each(function(){
                 $(this).remove();
            })
-           
+           cat_warn.removeClass('animate_c_w');
            surrender.one('click', game_over);
            surrender.css('background-color', 'green');
            accept.on('click', testing);
@@ -387,55 +483,46 @@ $(document).ready(function(){
 			selected.text('Q');
 		}
 	}
-	
 	function key_w(w){
 		if (w.key == 'w'){
 			selected.text('W');
 		}
 	}
-	
 	function key_e(e){
 		if (e.key == 'e'){
 			selected.text('E');
 		}
 	}
-	
 	function key_r(r){
 		if (r.key == 'r'){
 			selected.text('R');
 		}
 	}
-	
 	function key_t(t){
 		if (t.key == 't'){
 			selected.text('T');
 		}
 	}
-	
 	function key_y(y){
 		if (y.key == 'y'){
 			selected.text('Y');
 		}
 	}
-	
 	function key_u(u){
 		if (u.key == 'u'){
 			selected.text('U');
 		}
 	}
-	
 	function key_i(i){
 		if (i.key == 'i'){
 			selected.text('I');
 		}
 	}
-	
 	function key_o(o){
 		if (o.key == 'o'){
 			selected.text('O');
 		}
 	}
-	
 	function key_p(p){
 		if (p.key == 'p'){
 			selected.text('P');
@@ -447,13 +534,11 @@ $(document).ready(function(){
 			selected.text('A');
 		}
 	}
-	
 	function key_s(s){
 		if (s.key == 's'){
 			selected.text('S');
 		}
 	}
-	
 	function key_d(d){
 		if (d.key == 'd'){
 			selected.text('D');
@@ -465,13 +550,11 @@ $(document).ready(function(){
 			selected.text('F');
 		}
 	}
-	
 	function key_g(g){
 		if (g.key == 'g'){
 			selected.text('G');
 		}
 	}
-	
 	function key_h(h){
 		if (h.key == 'h'){
 			selected.text('H');
@@ -483,7 +566,6 @@ $(document).ready(function(){
 			selected.text('J');
 		}
 	}
-	
 	function key_k(k){
 		if (k.key == 'k'){
 			selected.text('K');
@@ -501,7 +583,6 @@ $(document).ready(function(){
 			selected.text('Z');
 		}
 	}
-	
 	function key_x(x){
 		if (x.key == 'x'){
 			selected.text('X');
@@ -513,13 +594,11 @@ $(document).ready(function(){
 			selected.text('C');
 		}
 	}
-	
 	function key_v(v){
 		if (v.key == 'v'){
 			selected.text('V');
 		}
 	}
-	
 	function key_b(b){
 		if (b.key == 'b'){
 			selected.text('B');
@@ -531,7 +610,6 @@ $(document).ready(function(){
 			selected.text('N');
 		}
 	}
-	
 	function key_m(m){
 		if (m.key == 'm'){
 			selected.text('M');
@@ -543,7 +621,6 @@ $(document).ready(function(){
 			testing();
 		}
 	}
-    
     // Funkcja przypisujaca eventy do documentu
 	function pressing(){
 		$('button').css('background-color','gainsboro');

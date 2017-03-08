@@ -10,6 +10,9 @@
 	<script type="text/javascript" src="js/app.js"></script>
   <script type=text/javascript src="js/switch_intro-to-game.js"></script>
   <script type="text/javascript" src="js/jquery-play-sound.js"></script>
+    <!--
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    -->
 </head>
 <body>
 	<header>
@@ -71,8 +74,35 @@
 		</section>
 		<section class="score">
 			<div class="container">
-				<div class="hangman_outer">
-                    <div class="hangman_inner"></div>
+                <div class="playground">
+                    <div class="category_warning animate_c_w">
+                        Remember to select <br> your category !!!
+                    </div>
+                    <div class="hangman_outer">
+                        <div class="hangman_inner"></div>
+                    </div>
+                    <div class="player">
+                        <div class="double_buttons">
+                            <button class="scores">Show scores</button>
+                            <button class="delete_players">Delete players</button>
+                        </div>
+                        <span>Scores:</span>
+                        <ul>
+                        <!--
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <li>6</li>
+                            <li>7</li>
+                            <li>8</li>
+                            <li>9</li>
+                        -->
+                        </ul>
+                        <input class="adding_player" placeholder="Player name">
+                        <button class="new_player">Add player</button>
+                    </div>
                 </div>
                 <div class="life">
                     <div class="heart"></div>

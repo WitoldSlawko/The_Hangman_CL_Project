@@ -153,7 +153,20 @@ header > .container > .title_logo {
   align-items: center;
   height: 350px;
 }
-.score > .container > .hangman_outer {
+.score > .container > .playground {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+.score > .container > .playground > .category_warning {
+  width: 20.83333%;
+  height: 50px;
+  color: transparent;
+  border: 5px solid transparent;
+  text-align: center;
+}
+.score > .container > .playground > .hangman_outer {
   height: 250px;
   width: 16.66667%;
   overflow: hidden;
@@ -163,13 +176,49 @@ header > .container > .title_logo {
   display: flex;
   justify-content: center;
 }
-.score > .container > .hangman_outer > .hangman_inner {
+.score > .container > .playground > .hangman_outer > .hangman_inner {
   height: 250px;
   width: 150px;
   overflow: hidden;
   position: absolute;
   transition: all 1s ease;
   border: 5px solid grey;
+}
+.score > .container > .playground > .player {
+  width: 20.83333%;
+  min-height: 100px;
+  align-self: flex-end;
+  color: aqua;
+  border: 3px solid aqua;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.score > .container > .playground > .player > .double_buttons {
+  display: flex;
+  flex-direction: row;
+}
+.score > .container > .playground > .player > .double_buttons > .scores, .score > .container > .playground > .player > .double_buttons .delete_players {
+  width: 50%;
+}
+.score > .container > .playground > .player > .double_buttons > .delete_players {
+  color: crimson;
+}
+.score > .container > .playground > .player > span {
+  color: aqua;
+  font-family: cursive;
+}
+.score > .container > .playground > .player > ul {
+  min-height: 30px;
+  max-height: 120px;
+  overflow-y: scroll;
+  text-align: left;
+}
+.score > .container > .playground > .player > ul > li {
+  font-family: cursive;
+}
+.score > .container > .playground > .player > input {
+  text-align: center;
 }
 .score > .container > .life {
   height: 25px;
@@ -316,6 +365,25 @@ label:hover::after {
   position: absolute;
   top: -20px;
   left: -15px;
+}
+
+.animate_c_w {
+  animation-name: blinking;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes blinking {
+  0% {
+    color: transparent;
+    border: 5px solid transparent;
+  }
+  100% {
+    color: yellow;
+    border: 5px solid yellow;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
