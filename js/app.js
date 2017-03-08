@@ -142,6 +142,8 @@ $(document).ready(function(){
             
         }
         
+        $('ul').empty();
+        
     });
     
     new_player_add.on('click',function(){
