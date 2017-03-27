@@ -10,6 +10,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "doctor_satan";
+  src: local("doctor_satan"), url("../fonts/doctor_satan/doctor_satan-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
   position: relative;
@@ -36,7 +42,7 @@ header > .container {
 header > .container > .title_logo {
   background-image: url(../images/hm_tittle3.png);
   height: 50px;
-  width: 12.5%;
+  width: 150px;
   background-size: cover;
   background-position-y: -5px;
 }
@@ -45,20 +51,25 @@ header > .container > .title_logo {
 .intro > .container {
   display: flex;
   flex-direction: column;
+  align-content: center;
   align-items: center;
-  height: 550px;
+  min-height: 550px;
   width: 100%;
 }
 .intro > .container > .question {
-  background-color: black;
-  background-image: url(../images/bg_1.jpg);
-  height: 100%;
+  font-family: "doctor_satan";
+  margin-top: 10%;
+  margin-bottom: 5%;
+  background-color: transparent;
+  font-size: 5rem;
+  text-align: center;
   width: 50%;
   background-size: cover;
   background-position: center;
+  color: red;
 }
 .intro > .container > .play_me {
-  width: 8.33333%;
+  width: 100px;
   height: 50px;
   font-size: 20px;
 }
@@ -90,7 +101,7 @@ header > .container > .title_logo {
   height: 25px;
   width: 55.55556%;
 }
-.category_btns > .container > .category_pack > .category_type label {
+.category_btns > .container > .category_pack > .category_type .first_lab {
   color: yellow;
   font-weight: bold;
   letter-spacing: 3px;
@@ -160,15 +171,14 @@ header > .container > .title_logo {
   justify-content: space-between;
 }
 .score > .container > .playground > .category_warning {
+  margin-top: 1%;
   width: 20.83333%;
-  height: 50px;
   color: transparent;
-  border: 5px solid transparent;
   text-align: center;
 }
 .score > .container > .playground > .hangman_outer {
   height: 250px;
-  width: 16.66667%;
+  width: 200px;
   overflow: hidden;
   position: relative;
   float: left;
@@ -228,7 +238,7 @@ header > .container > .title_logo {
 }
 .score > .container > .life > .heart {
   height: 100%;
-  width: 2.08333%;
+  width: 25px;
   background-image: url(../images/heart.jpg);
   background-size: cover;
 }
@@ -273,7 +283,7 @@ header > .container > .title_logo {
 .typing > .container > .selected {
   background-color: white;
   height: 40px;
-  width: 4.16667%;
+  width: 50px;
   margin-right: 15px;
   border: 1px solid black;
   text-transform: uppercase;
@@ -283,7 +293,7 @@ header > .container > .title_logo {
   justify-content: center;
   align-items: center;
   height: 40px;
-  width: 4.16667%;
+  width: 50px;
   letter-spacing: 1px;
 }
 
@@ -310,6 +320,21 @@ header > .container > .title_logo {
   margin: 0 0.83333%;
   border-radius: 50%;
   font-family: "friday13sh";
+}
+
+.mobile {
+  display: none;
+}
+.mobile > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.mobile .second_lab {
+  color: pink;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 
 button {
@@ -343,6 +368,7 @@ button {
 
 /* --------------------------------- */
 .surrender:hover::after {
+  padding: 1px;
   content: "surrender";
   background-color: yellow;
   position: absolute;
@@ -351,6 +377,7 @@ button {
 }
 
 .refresh:hover::before {
+  padding: 3px;
   content: "refresh";
   background-color: yellow;
   position: absolute;
@@ -358,7 +385,8 @@ button {
   left: -10px;
 }
 
-label:hover::after {
+.first_lab:hover::after {
+  padding: 3px;
   content: "select category";
   color: black;
   background-color: yellow;
@@ -378,11 +406,29 @@ label:hover::after {
 @keyframes blinking {
   0% {
     color: transparent;
-    border: 5px solid transparent;
+    /*border: 5px solid transparent*/
   }
   100% {
     color: yellow;
-    border: 5px solid yellow;
+    /*border: 5px solid yellow*/
+  }
+}
+@media only screen and (min-width: 600px) {
+  .view_1 {
+    display: block;
+  }
+
+  .view_2 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .view_1 {
+    display: none;
+  }
+
+  .view_2 {
+    display: block;
   }
 }
 

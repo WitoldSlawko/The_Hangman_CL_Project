@@ -17,6 +17,13 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: "doctor_satan";
+	src: local("doctor_satan"), url("../fonts/doctor_satan/doctor_satan-webfont.woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 * {
 	box-sizing: border-box;
 	position: relative;
@@ -43,7 +50,8 @@ header {
     > .title_logo {
       background-image: url(../images/hm_tittle3.png);
       height: 50px;
-      width: rel(150,1200);
+      //width: rel(150,1200);
+      width: 150px;
       background-size: cover;
       background-position-y: -5px;
     }
@@ -56,19 +64,26 @@ header {
   > .container {
     display: flex;
     flex-direction: column;
+    align-content: center;
     align-items: center;
-    height: 550px;
+    min-height: 550px;
     width: 100%;
         > .question {
-        background-color: black;
-        background-image: url(../images/bg_1.jpg);
-        height: 100%;
+        //background-image: url(../images/bg_1.jpg);
+        font-family: "doctor_satan";
+        margin-top: 10%;
+        margin-bottom: 5%;
+        background-color: transparent;
+        font-size: 5rem;
+        text-align: center;
         width: 50%;
         background-size: cover;
         background-position: center;
+        color: red;
         }
         > .play_me {
-          width: rel(100,1200);
+          //width: rel(100,1200);
+          width: 100px;
           height: 50px;
           font-size: 20px;
         }
@@ -98,7 +113,7 @@ header {
                 left: 10px;
                 height: 25px;
                 width: rel(150,270);
-        label {
+        .first_lab {
           color: yellow;
           font-weight: bold;
           letter-spacing: 3px;
@@ -172,15 +187,15 @@ header {
             display: flex;
             justify-content: space-between;
             > .category_warning {
+                margin-top: 1%;
                 width: rel(250,1200);
-                height:  50px;
                 color: transparent;
-                border:  5px solid transparent;
                 text-align: center;
             }
             > .hangman_outer {
                 height: 250px;
-                width: rel(200,1200);
+                //width: rel(200,1200);
+                width: 200px;
                 overflow: hidden;
                 position: relative;
                 float: left;
@@ -244,7 +259,8 @@ header {
             justify-content: center;
             > .heart {
                 height: 100%;
-                width: rel(25,1200);
+                //width: rel(25,1200);
+                width: 25px;
                 background-image: url(../images/heart.jpg);
                 background-size: cover;
             }
@@ -289,10 +305,11 @@ header {
 		align-items: center;
 		height: 40px;
 		> .selected {
-            background-color: white;
+      background-color: white;
 			height: 40px;
-            //border: 0px solid transparent;
-			width: rel(50,1200);
+      //border: 0px solid transparent;
+			//width: rel(50,1200);
+			width: 50px;
 			margin-right: 15px;
 			border: 1px solid black;
 			text-transform: uppercase;
@@ -302,8 +319,9 @@ header {
 			justify-content: center;
 			align-items: center;
 			height: 40px;
-			width: rel(50,1200);
-            letter-spacing: 1px;
+			//width: rel(50,1200);
+			width: 50px;
+      letter-spacing: 1px;
 		}
 	}
 }
@@ -324,14 +342,29 @@ header {
 			display: flex;
 			justify-content: center;
 			> button {
-                width: rel(50,1200);
-                height: 100%;
-                margin: 0 rel(10,1200);
-                border-radius: 50%;
-                font-family: "friday13sh";
+        width: rel(50,1200);
+        height: 100%;
+        margin: 0 rel(10,1200);
+        border-radius: 50%;
+        font-family: "friday13sh";
 			}
 		}
 	}
+}
+
+.mobile {
+    display: none;
+    > .container {
+        display: flex;
+		flex-direction: column;
+		align-items: center;
+        margin-top: 10px;
+    }
+    .second_lab {
+        color: pink;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
 }
 
 button {
@@ -368,6 +401,7 @@ button {
 /* --------------------------------- */
 
 .surrender:hover::after {
+    padding: 1px;
     content: "surrender";
     background-color: yellow;
     position: absolute;
@@ -376,6 +410,7 @@ button {
 }
 
 .refresh:hover::before {
+    padding: 3px;
     content: "refresh";
     background-color: yellow;
     position: absolute;
@@ -383,7 +418,8 @@ button {
     left: -10px;
 }
 
-label:hover::after {
+.first_lab:hover::after {
+    padding: 3px;
     content: "select category";
     color: black;
     background-color: yellow;
@@ -393,7 +429,7 @@ label:hover::after {
 }
 
 .animate_c_w {
-    animation-name: blinking;
+  animation-name: blinking;
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease;
@@ -402,6 +438,24 @@ label:hover::after {
 
 @keyframes blinking
 {
-    0% {color: transparent; border: 5px solid transparent}
-    100% {color: yellow; border: 5px solid yellow}
+    0% {color: transparent; /*border: 5px solid transparent*/}
+    100% {color: yellow; /*border: 5px solid yellow*/}
+}
+
+@media only screen and (min-width: 600px) {
+    .view_1 {
+        display: block;
+    }
+    .view_2 {
+        display: none;
+    }   
+}
+
+@media only screen and (max-width: 600px) {
+    .view_1 {
+        display: none;
+    }
+    .view_2 {
+        display: block;
+    }
 }
