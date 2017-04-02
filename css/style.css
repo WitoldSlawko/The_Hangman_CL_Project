@@ -208,7 +208,8 @@ header > .container > .title_logo {
   display: flex;
   flex-direction: row;
 }
-.score > .container > .playground > .player > .double_buttons > .scores, .score > .container > .playground > .player > .double_buttons .delete_players {
+.score > .container > .playground > .player > .double_buttons > .scores,
+.score > .container > .playground > .player > .double_buttons .delete_players {
   width: 50%;
 }
 .score > .container > .playground > .player > .double_buttons > .delete_players {
@@ -223,9 +224,13 @@ header > .container > .title_logo {
   max-height: 120px;
   overflow-y: scroll;
   text-align: left;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .score > .container > .playground > .player > ul > li {
   font-family: cursive;
+  font-weight: bold;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .score > .container > .playground > .player > input {
   text-align: center;

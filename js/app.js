@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  // Podstawowe zmienne z pozyskane z elementów DOM : ----------------------------
+  // Podstawowe zmienne pozyskane z elementów DOM : ----------------------------
 
   var refresh = $('.refresh');
   var surrender = $('.surrender');
@@ -181,7 +181,7 @@ $(document).ready(function () {
   delete_players.on('click', function () {
     var json_2 = (function () {
       $.ajax({
-        'async': false,
+        //'async': false,
         'global': true,
         'url': hm_scores,
         'dataType': "json"
@@ -253,7 +253,7 @@ $(document).ready(function () {
         myWord = body_pool[Math.floor(Math.random() * body_pool.length)];
         break;
       case 'Buildings':
-        myWord = buildings_pool[Math.floor(Math.random() * buidlings_pool.length)];
+        myWord = buildings_pool[Math.floor(Math.random() * buildings_pool.length)];
         break;
       case 'City':
         myWord = city_pool[Math.floor(Math.random() * city_pool.length)];
@@ -297,7 +297,7 @@ $(document).ready(function () {
       case 'Trees':
         myWord = trees_pool[Math.floor(Math.random() * trees_pool.length)];
         break;
-      case 'Veicles':
+      case 'Vehicles':
         myWord = vehicles_pool[Math.floor(Math.random() * vehicles_pool.length)];
         break;
       case 'Weather':
@@ -415,12 +415,123 @@ $(document).ready(function () {
         //$.playSound("../The_Hangman/sounds/win");
         $.playSound("./sounds/win");
         surrender.off('click');
-        refresh.one('click', reroll);
         refresh.css('background-color', 'green');
         sel.removeAttr('disabled');
+        locking();
+        picker.attr('disabled', 'disabled');
+        refresh.one('click', reroll);
       }
     };
-    // Jeśli dana wybrana litera została już sprawdzona, odczepiana zostaje już litera 
+    // Jeśli dana wybrana litera została już sprawdzona, odczepiana zostaje już litera
+		
+		switch (value_letter){
+			case 'Q':
+				$(document).unbind('keyup', key_q);
+      	$('.pick_Q').attr('disabled', 'disabled');
+				break;
+			case 'W':
+				$(document).unbind('keyup', key_w);
+      	$('.pick_W').attr('disabled', 'disabled');
+				break;
+			case 'E':
+				$(document).unbind('keyup', key_e);
+      	$('.pick_E').attr('disabled', 'disabled');
+				break;
+			case 'R':
+				$(document).unbind('keyup', key_r);
+      	$('.pick_R').attr('disabled', 'disabled');
+				break;
+			case 'T':
+				$(document).unbind('keyup', key_t);
+      	$('.pick_T').attr('disabled', 'disabled');
+				break;
+			case 'Y':
+				$(document).unbind('keyup', key_y);
+      	$('.pick_Y').attr('disabled', 'disabled');
+				break;
+			case 'U':
+				$(document).unbind('keyup', key_u);
+      	$('.pick_U').attr('disabled', 'disabled');
+				break;
+			case 'I':
+				$(document).unbind('keyup', key_i);
+      	$('.pick_I').attr('disabled', 'disabled');
+				break;
+			case 'O':
+				$(document).unbind('keyup', key_o);
+      	$('.pick_O').attr('disabled', 'disabled');
+				break;
+			case 'P':
+				$(document).unbind('keyup', key_p);
+      	$('.pick_P').attr('disabled', 'disabled');
+				break;
+			case 'A':
+				$(document).unbind('keyup', key_a);
+      	$('.pick_A').attr('disabled', 'disabled');
+				break;
+			case 'S':
+				$(document).unbind('keyup', key_s);
+      	$('.pick_S').attr('disabled', 'disabled');
+				break;
+			case 'D':
+				$(document).unbind('keyup', key_d);
+      	$('.pick_D').attr('disabled', 'disabled');
+				break;
+			case 'F':
+				$(document).unbind('keyup', key_f);
+      	$('.pick_F').attr('disabled', 'disabled');
+				break;
+			case 'G':
+				$(document).unbind('keyup', key_g);
+      	$('.pick_G').attr('disabled', 'disabled');
+				break;
+			case 'H':
+				$(document).unbind('keyup', key_h);
+      	$('.pick_H').attr('disabled', 'disabled');
+				break;
+			case 'J':
+				$(document).unbind('keyup', key_j);
+      	$('.pick_J').attr('disabled', 'disabled');
+				break;
+			case 'K':
+				$(document).unbind('keyup', key_k);
+      	$('.pick_K').attr('disabled', 'disabled');
+				break;
+			case 'L':
+				$(document).unbind('keyup', key_l);
+      	$('.pick_L').attr('disabled', 'disabled');
+				break;
+			case 'Z':
+				$(document).unbind('keyup', key_z);
+      	$('.pick_Z').attr('disabled', 'disabled');
+				break;
+			case 'X':
+				$(document).unbind('keyup', key_x);
+      	$('.pick_X').attr('disabled', 'disabled');
+				break;
+			case 'C':
+				$(document).unbind('keyup', key_c);
+      	$('.pick_C').attr('disabled', 'disabled');
+				break;
+			case 'V':
+				$(document).unbind('keyup', key_v);
+      	$('.pick_V').attr('disabled', 'disabled');
+				break;
+			case 'B':
+				$(document).unbind('keyup', key_b);
+      	$('.pick_B').attr('disabled', 'disabled');
+				break;
+			case 'N':
+				$(document).unbind('keyup', key_n);
+      	$('.pick_N').attr('disabled', 'disabled');
+				break;
+			case 'M':
+				$(document).unbind('keyup', key_m);
+      	$('.pick_M').attr('disabled', 'disabled');
+				break;
+		}
+		
+		/*
     if (value_letter === 'Q') {
       $(document).unbind('keyup', key_q);
       $('.pick_Q').attr('disabled', 'disabled');
@@ -500,7 +611,8 @@ $(document).ready(function () {
       $(document).unbind('keyup', key_m);
       $('.pick_M').attr('disabled', 'disabled');
     }
-  }
+		*/
+	}
 
   surrender.off('click'); // Wyłącznie klikania z guzika surrender
 
@@ -522,6 +634,7 @@ $(document).ready(function () {
     accept.css('background-color', 'red');
     sprite.css('background-position', 'right');
     locking();
+    $('.picking').attr('disabled','disabled');
     lose_count.text(parseInt(lose_count.text()) + 1);
     //$.playSound("../The_Hangman/sounds/loose");
     $.playSound("./sounds/loose");
@@ -537,6 +650,7 @@ $(document).ready(function () {
     surrender.css('background-color', 'gainsboro');
     refresh.css('background-color', 'red');
     $('.pick').removeAttr('disabled');
+    $('.picking').removeAttr('disabled');
   };
 
   refresh.off('click'); // Wyłączenie klikania z guzika odświeżania - czyli losowania nowego hasła
@@ -850,7 +964,87 @@ $(document).ready(function () {
     if ($('.picking option:selected').text() != 'Select ...') {
       $('.first_pick').hide(0);
     }
-
+    switch ($('.picking option:selected').text()){
+			case 'Q':
+				$('.selected').text('Q');
+				break;
+			case 'W':
+				$('.selected').text('W');
+				break;
+			case 'E':
+				$('.selected').text('E');
+				break;
+			case 'R':
+				$('.selected').text('R');
+				break;
+			case 'T':
+				$('.selected').text('T');
+				break;
+			case 'Y':
+				$('.selected').text('Y');
+				break;
+			case 'U':
+				$('.selected').text('U');
+				break;
+			case 'I':
+				$('.selected').text('I');
+				break;
+			case 'O':
+				$('.selected').text('O');
+				break;
+			case 'P':
+				$('.selected').text('P');
+				break;
+			case 'A':
+				$('.selected').text('A');
+				break;
+			case 'S':
+				$('.selected').text('S');
+				break;
+			case 'D':
+				$('.selected').text('D');
+				break;
+			case 'F':
+				$('.selected').text('F');
+				break;
+			case 'G':
+				$('.selected').text('G');
+				break;
+			case 'H':
+				$('.selected').text('H');
+				break;
+			case 'J':
+				$('.selected').text('J');
+				break;
+			case 'K':
+				$('.selected').text('K');
+				break;
+			case 'L':
+				$('.selected').text('L');
+				break;
+			case 'Z':
+				$('.selected').text('Z');
+				break;
+			case 'X':
+				$('.selected').text('X');
+				break;
+			case 'C':
+				$('.selected').text('C');
+				break;
+			case 'V':
+				$('.selected').text('V');
+				break;
+			case 'B':
+				$('.selected').text('B');
+				break;
+			case 'N':
+				$('.selected').text('N');
+				break;
+			case 'M':
+				$('.selected').text('M');
+				break;
+    }
+		/*
     if ($('.picking option:selected').text() == 'Q') {
       $('.selected').text('Q');
     } else if ($('.picking option:selected').text() == 'W') {
@@ -904,6 +1098,7 @@ $(document).ready(function () {
     } else if ($('.picking option:selected').text() == 'M') {
       $('.selected').text('M');
     }
+		*/
   }
 
 
