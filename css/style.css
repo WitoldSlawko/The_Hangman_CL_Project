@@ -97,7 +97,7 @@ header > .container > .title_logo {
   display: flex;
 }
 .category_btns > .container > .category_pack > h2 {
-  font-size: 1rem;
+  font-size: 0.5rem;
   margin-left: 15px;
 }
 .category_btns > .container > .category_pack > .category_type {
@@ -107,6 +107,7 @@ header > .container > .title_logo {
 }
 .category_btns > .container > .category_pack > .category_type .first_lab {
   color: yellow;
+  font-size: 0.5rem;
   font-weight: bold;
   letter-spacing: 3px;
 }
@@ -175,7 +176,7 @@ header > .container > .title_logo {
   justify-content: space-between;
 }
 .score > .container > .playground > .category_warning {
-  margin-top: 2%;
+  align-self: center;
   width: 20.83333%;
   color: transparent;
   text-align: center;
@@ -405,6 +406,7 @@ button {
   position: absolute;
   top: -20px;
   left: -15px;
+  font-size: 0.5rem;
 }
 
 .animate_c_w {
@@ -437,6 +439,10 @@ button {
 @media only screen and (max-width: 600px) {
   html {
     font-size: 12px;
+  }
+
+  .first_lab {
+    font-size: 3rem;
   }
 
   .view_1 {

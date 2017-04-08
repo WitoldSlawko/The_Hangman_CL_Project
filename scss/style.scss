@@ -111,7 +111,7 @@ header {
 			width: rel(370, 1200);
 			display: flex;
 			>h2 {
-				font-size: 1rem;
+				font-size: 0.5rem;
 				margin-left: 15px;
 			}
 			>.category_type {
@@ -120,6 +120,7 @@ header {
 				width: rel(150, 270);
 				.first_lab {
 					color: yellow;
+					font-size: 0.5rem;
 					font-weight: bold;
 					letter-spacing: 3px;
 				}
@@ -193,7 +194,7 @@ header {
 			display: flex;
 			justify-content: space-between;
 			>.category_warning {
-				margin-top: 2%;
+				align-self: center;
 				width: rel(250, 1200);
 				color: transparent;
 				text-align: center;
@@ -445,6 +446,7 @@ button {
 	position: absolute;
 	top: -20px;
 	left: -15px;
+	font-size: 0.5rem;
 }
 
 .animate_c_w {
@@ -478,6 +480,9 @@ button {
 @media only screen and (max-width: 600px) {
 	html {
 		font-size: 12px;
+	}
+	.first_lab {
+		font-size: 3rem;
 	}
 	.view_1 {
 		display: none;
