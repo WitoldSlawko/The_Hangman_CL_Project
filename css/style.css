@@ -97,7 +97,7 @@ header > .container > .title_logo {
   display: flex;
 }
 .category_btns > .container > .category_pack > h2 {
-  font-size: 0.5rem;
+  font-size: 1rem;
   margin-left: 15px;
 }
 .category_btns > .container > .category_pack > .category_type {
@@ -107,7 +107,6 @@ header > .container > .title_logo {
 }
 .category_btns > .container > .category_pack > .category_type .first_lab {
   color: yellow;
-  font-size: 0.5rem;
   font-weight: bold;
   letter-spacing: 3px;
 }
@@ -120,7 +119,6 @@ header > .container > .title_logo {
 }
 .category_btns > .container > .score_board > .win_rate {
   color: lime;
-  letter-spacing: 5px;
 }
 .category_btns > .container > .score_board > .win_count {
   color: lime;
@@ -128,7 +126,6 @@ header > .container > .title_logo {
 }
 .category_btns > .container > .score_board > .lose_rate {
   color: red;
-  letter-spacing: 5px;
 }
 .category_btns > .container > .score_board > .lose_count {
   color: red;
@@ -176,7 +173,6 @@ header > .container > .title_logo {
   justify-content: space-between;
 }
 .score > .container > .playground > .category_warning {
-  align-self: center;
   width: 20.83333%;
   color: transparent;
   text-align: center;
@@ -439,10 +435,6 @@ button {
 @media only screen and (max-width: 600px) {
   html {
     font-size: 12px;
-  }
-
-  .first_lab {
-    font-size: 3rem;
   }
 
   .view_1 {
