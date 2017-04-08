@@ -1,3 +1,7 @@
+html {
+  font-size: 20px;
+}
+
 @font-face {
   font-family: "friday13sh";
   src: local("friday13sh"), url("../fonts/friday13/friday13sh-webfont.woff");
@@ -61,7 +65,7 @@ header > .container > .title_logo {
   margin-top: 10%;
   margin-bottom: 5%;
   background-color: transparent;
-  font-size: 5rem;
+  font-size: 3rem;
   text-align: center;
   width: 50%;
   background-size: cover;
@@ -93,7 +97,7 @@ header > .container > .title_logo {
   display: flex;
 }
 .category_btns > .container > .category_pack > h2 {
-  font-size: 18px;
+  font-size: 1rem;
   margin-left: 15px;
 }
 .category_btns > .container > .category_pack > .category_type {
@@ -132,7 +136,7 @@ header > .container > .title_logo {
 .category_btns > .container > .score_board > * {
   width: 20%;
   height: 32px;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -171,7 +175,7 @@ header > .container > .title_logo {
   justify-content: space-between;
 }
 .score > .container > .playground > .category_warning {
-  margin-top: 1%;
+  margin-top: 2%;
   width: 20.83333%;
   color: transparent;
   text-align: center;
@@ -211,6 +215,7 @@ header > .container > .title_logo {
 .score > .container > .playground > .player > .double_buttons > .scores,
 .score > .container > .playground > .player > .double_buttons .delete_players {
   width: 50%;
+  font-size: 0.5rem;
 }
 .score > .container > .playground > .player > .double_buttons > .delete_players {
   color: crimson;
@@ -228,6 +233,7 @@ header > .container > .title_logo {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .score > .container > .playground > .player > ul > li {
+  list-style-type: square;
   font-family: cursive;
   font-weight: bold;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -250,7 +256,7 @@ header > .container > .title_logo {
 .score > .container > .life > .life_count {
   height: 100%;
   width: 2.08333%;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -258,6 +264,7 @@ header > .container > .title_logo {
   font-weight: bold;
   color: darkred;
   font-family: cursive;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .score > .container > .letters {
   height: 75px;
@@ -270,7 +277,7 @@ header > .container > .title_logo {
   width: 50px;
   height: 50px;
   margin: 0 10px;
-  font-size: 35px;
+  font-size: 1.5rem;
   background-color: grey;
   border: 1px solid black;
 }
@@ -350,7 +357,7 @@ button {
 }
 
 .row > button {
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 /* --------------------------------- */
@@ -359,7 +366,7 @@ button {
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 1rem;
 }
 
 /* --------------------------------- */
@@ -428,6 +435,10 @@ button {
   }
 }
 @media only screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+
   .view_1 {
     display: none;
   }

@@ -1,3 +1,7 @@
+/* line 6, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+html {
+  font-size: 20px; }
+
 @font-face {
   font-family: "friday13sh";
   src: local("friday13sh"), url("../fonts/friday13/friday13sh-webfont.woff");
@@ -16,30 +20,30 @@
   font-weight: normal;
   font-style: normal; }
 
-/* line 27, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 31, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 * {
   box-sizing: border-box;
   position: relative;
   font-family: "friday13v12"; }
 
-/* line 33, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 37, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 body {
   background-color: black; }
 
-/* line 37, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 41, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .container {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto; }
 
-/* line 44, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 48, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 header > .container {
   display: flex;
   height: 64px;
   display: flex;
   justify-content: center;
   align-items: center; }
-  /* line 50, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  /* line 54, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
   header > .container > .title_logo {
     background-image: url(../images/hm_tittle3.png);
     height: 50px;
@@ -48,7 +52,7 @@ header > .container {
     background-position-y: -5px; }
 
 /* --------------------------------- */
-/* line 65, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 69, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .intro > .container {
   display: flex;
   flex-direction: column;
@@ -56,96 +60,96 @@ header > .container {
   align-items: center;
   min-height: 550px;
   width: 100%; }
-  /* line 72, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  /* line 76, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
   .intro > .container > .question {
     font-family: "doctor_satan";
     margin-top: 10%;
     margin-bottom: 5%;
     background-color: transparent;
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: center;
     width: 50%;
     background-size: cover;
     background-position: center;
     color: red; }
-  /* line 85, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  /* line 89, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
   .intro > .container > .play_me {
     width: 100px;
     height: 50px;
     font-size: 20px; }
-  /* line 91, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  /* line 95, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
   .intro > .container > .play_me:hover {
     color: red; }
 
-/* line 97, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 101, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .category_btns {
   display: none; }
-  /* line 99, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  /* line 103, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
   .category_btns > .container {
     height: 32px; }
-    /* line 101, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+    /* line 105, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
     .category_btns > .container > * {
       display: block;
       position: relative; }
-    /* line 105, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+    /* line 109, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
     .category_btns > .container > .category_pack {
       float: left;
       width: 30.83333%;
       display: flex; }
-      /* line 109, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
-      .category_btns > .container > .category_pack > h2 {
-        font-size: 18px;
-        margin-left: 15px; }
       /* line 113, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+      .category_btns > .container > .category_pack > h2 {
+        font-size: 1rem;
+        margin-left: 15px; }
+      /* line 117, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
       .category_btns > .container > .category_pack > .category_type {
         left: 10px;
         height: 25px;
         width: 55.55556%; }
-        /* line 117, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+        /* line 121, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
         .category_btns > .container > .category_pack > .category_type .first_lab {
           color: yellow;
           font-weight: bold;
           letter-spacing: 3px; }
-    /* line 124, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+    /* line 128, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
     .category_btns > .container > .score_board {
       float: left;
       height: 32px;
       width: 33.33333%;
       display: flex;
       justify-content: space-around; }
-      /* line 131, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+      /* line 135, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
       .category_btns > .container > .score_board > .win_rate {
         color: lime;
         letter-spacing: 5px; }
-      /* line 135, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+      /* line 139, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
       .category_btns > .container > .score_board > .win_count {
         color: lime;
         font-family: cursive; }
-      /* line 139, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+      /* line 143, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
       .category_btns > .container > .score_board > .lose_rate {
         color: red;
         letter-spacing: 5px; }
-      /* line 143, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+      /* line 147, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
       .category_btns > .container > .score_board > .lose_count {
         color: red;
         font-family: cursive; }
-      /* line 147, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+      /* line 151, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
       .category_btns > .container > .score_board > * {
         width: 20%;
         height: 32px;
-        font-size: 20px;
+        font-size: 1rem;
         font-weight: bold;
         display: flex;
         justify-content: center;
         align-items: center; }
-    /* line 158, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+    /* line 162, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
     .category_btns > .container > .surrender {
       float: left;
       height: 32px;
       width: 32px;
       background-image: url(../images/white_flag_icon.png);
       background-size: cover; }
-    /* line 165, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+    /* line 169, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
     .category_btns > .container > .refresh {
       float: right;
       height: 32px;
@@ -154,29 +158,29 @@ header > .container {
       background-size: cover; }
 
 /* --------------------------------- */
-/* line 178, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 182, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .score {
   display: none; }
-  /* line 180, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  /* line 184, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
   .score > .container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 350px; }
-    /* line 186, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+    /* line 190, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
     .score > .container > .playground {
       width: 100%;
       height: 250px;
       display: flex;
       justify-content: space-between; }
-      /* line 191, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+      /* line 195, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
       .score > .container > .playground > .category_warning {
-        margin-top: 1%;
+        margin-top: 2%;
         width: 20.83333%;
         color: transparent;
         text-align: center; }
-      /* line 197, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+      /* line 201, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
       .score > .container > .playground > .hangman_outer {
         height: 250px;
         width: 200px;
@@ -186,7 +190,7 @@ header > .container {
         transition: all 1s ease;
         display: flex;
         justify-content: center; }
-        /* line 207, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+        /* line 211, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
         .score > .container > .playground > .hangman_outer > .hangman_inner {
           height: 250px;
           width: 150px;
@@ -194,7 +198,7 @@ header > .container {
           position: absolute;
           transition: all 1s ease;
           border: 5px solid grey; }
-      /* line 216, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+      /* line 220, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
       .score > .container > .playground > .player {
         width: 20.83333%;
         min-height: 100px;
@@ -204,22 +208,23 @@ header > .container {
         text-align: center;
         display: flex;
         flex-direction: column; }
-        /* line 229, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+        /* line 233, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
         .score > .container > .playground > .player > .double_buttons {
           display: flex;
           flex-direction: row; }
-          /* line 232, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+          /* line 236, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
           .score > .container > .playground > .player > .double_buttons > .scores,
           .score > .container > .playground > .player > .double_buttons .delete_players {
-            width: 50%; }
-          /* line 236, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+            width: 50%;
+            font-size: 0.5rem; }
+          /* line 241, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
           .score > .container > .playground > .player > .double_buttons > .delete_players {
             color: crimson; }
-        /* line 240, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+        /* line 245, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
         .score > .container > .playground > .player > span {
           color: aqua;
           font-family: cursive; }
-        /* line 244, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+        /* line 249, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
         .score > .container > .playground > .player > ul {
           min-height: 30px;
           max-height: 120px;
@@ -227,65 +232,67 @@ header > .container {
           text-align: left;
           font-weight: bold;
           text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
-          /* line 251, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+          /* line 256, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
           .score > .container > .playground > .player > ul > li {
+            list-style-type: square;
             font-family: cursive;
             font-weight: bold;
             text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
-        /* line 257, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+        /* line 263, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
         .score > .container > .playground > .player > input {
           text-align: center; }
-    /* line 262, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+    /* line 268, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
     .score > .container > .life {
       height: 25px;
       width: 100%;
       display: flex;
       justify-content: center; }
-      /* line 267, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+      /* line 273, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
       .score > .container > .life > .heart {
         height: 100%;
         width: 25px;
         background-image: url(../images/heart.jpg);
         background-size: cover; }
-      /* line 274, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+      /* line 280, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
       .score > .container > .life > .life_count {
         height: 100%;
         width: 2.08333%;
-        font-size: 20px;
+        font-size: 1.5rem;
         font-weight: bold;
         display: flex;
         justify-content: center;
         align-items: center;
         font-weight: bold;
         color: darkred;
-        font-family: cursive; }
-    /* line 287, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+        font-family: cursive;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
+    /* line 294, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
     .score > .container > .letters {
       height: 75px;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center; }
-      /* line 293, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+      /* line 300, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
       .score > .container > .letters > .square {
         width: 50px;
         height: 50px;
         margin: 0 10px;
-        font-size: 35px;
+        font-size: 1.5rem;
         background-color: grey;
         border: 1px solid black; }
 
 /* --------------------------------- */
-/* line 308, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 315, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .typing {
   display: none; }
-  /* line 310, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  /* line 317, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
   .typing > .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 40px; }
-    /* line 315, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+    /* line 322, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
     .typing > .container > .selected {
       background-color: white;
       height: 40px;
@@ -293,7 +300,7 @@ header > .container {
       margin-right: 15px;
       border: 1px solid black;
       text-transform: uppercase; }
-    /* line 325, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+    /* line 332, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
     .typing > .container > .accept {
       display: flex;
       justify-content: center;
@@ -303,23 +310,23 @@ header > .container {
       letter-spacing: 1px; }
 
 /* --------------------------------- */
-/* line 340, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 347, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .keyboard {
   display: none; }
-  /* line 342, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  /* line 349, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
   .keyboard > .container {
     height: 175px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around; }
-    /* line 348, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+    /* line 355, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
     .keyboard > .container > .row {
       width: 100%;
       height: 50px;
       display: flex;
       justify-content: center; }
-      /* line 353, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+      /* line 360, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
       .keyboard > .container > .row > button {
         width: 4.16667%;
         height: 100%;
@@ -327,52 +334,52 @@ header > .container {
         border-radius: 50%;
         font-family: "friday13sh"; }
 
-/* line 364, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 371, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .mobile {
   display: none; }
-  /* line 366, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  /* line 373, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
   .mobile > .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10px; }
-  /* line 372, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  /* line 379, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
   .mobile .second_lab {
     color: pink;
     font-weight: bold;
     letter-spacing: 3px; }
 
-/* line 379, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 386, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 button {
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold; }
 
-/* line 386, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 393, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .row > button {
-  font-size: 20px; }
+  font-size: 1rem; }
 
 /* --------------------------------- */
-/* line 393, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 400, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 22px; }
+  font-size: 1rem; }
 
 /* --------------------------------- */
-/* line 404, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 411, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .old_path {
   background-image: url(../images/hangman_slides.png); }
 
-/* line 408, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 415, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .new_path {
   background-image: url(../images/hm_win.png); }
 
 /* --------------------------------- */
-/* line 415, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 422, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .surrender:hover::after {
   padding: 1px;
   content: "surrender";
@@ -381,7 +388,7 @@ button {
   top: -20px;
   left: -15px; }
 
-/* line 424, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 431, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .refresh:hover::before {
   padding: 3px;
   content: "refresh";
@@ -390,7 +397,7 @@ button {
   top: -20px;
   left: -10px; }
 
-/* line 433, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 440, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .first_lab:hover::after {
   padding: 3px;
   content: "select category";
@@ -400,7 +407,7 @@ button {
   top: -20px;
   left: -15px; }
 
-/* line 443, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+/* line 450, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
 .animate_c_w {
   animation-name: blinking;
   animation-duration: 3s;
@@ -417,18 +424,21 @@ button {
     /*border: 5px solid yellow*/ } }
 
 @media only screen and (min-width: 600px) {
-  /* line 463, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  /* line 470, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
   .view_1 {
     display: block; }
-  /* line 466, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  /* line 473, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
   .view_2 {
     display: none; } }
 
 @media only screen and (max-width: 600px) {
-  /* line 472, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  /* line 479, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  html {
+    font-size: 12px; }
+  /* line 482, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
   .view_1 {
     display: none; }
-  /* line 475, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
+  /* line 485, /home/wiciu/git_github/The_Hangman_CL_Project/scss/style.scss */
   .view_2 {
     display: block; } }
 
